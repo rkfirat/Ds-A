@@ -87,7 +87,6 @@ class LinkedList {
 int main() {
     LinkedList list;
 
-    // Listeye bazı elemanlar ekleyelim
     list.add(1);
     list.add(2);
     list.add(3);

@@ -73,22 +73,18 @@ class LinkedStack {
 int main() {
     LinkedStack stack;
 
-    // Push elements onto the stack
     stack.push(10);
     stack.push(20);
     stack.push(30);
 
-    // Display the stack
     stack.display();
 
-    // Pop elements from the stack
     cout << "Popped: " << stack.pop() << endl;
     stack.display();
 
-    // Pop remaining elements
     stack.pop();
     stack.pop();
-    stack.pop(); // Attempt to pop from an empty stack
+    stack.pop();
 
     return 0;
 }

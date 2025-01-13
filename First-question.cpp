@@ -72,7 +72,6 @@ class LinkedList {
 int main() {
     LinkedList list;
 
-    // Listeye bazı elemanlar ekleyelim
     list.add(10);
     list.add(20);
     list.add(30);
@@ -81,7 +80,6 @@ int main() {
     cout << "Orijinal liste: ";
     list.display();
 
-    // Düğüm değişimi
     if (list.ExchangeNode(1, 3)) {
         cout << "1 ve 3 indekslerindeki düğümler değiştirildi: ";
         list.display();
@@ -89,7 +87,6 @@ int main() {
         cout << "Geçersiz indisler nedeniyle değişim yapılamadı." << endl;
     }
 
-    // Geçersiz indislerle test
     if (!list.ExchangeNode(1, 10)) {
         cout << "Geçersiz indisler nedeniyle değişim yapılamadı." << endl;
     }

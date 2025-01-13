@@ -76,7 +76,6 @@ int main() {
     LinkedList list1;
     LinkedList list2;
 
-    // Insert sorted elements into both lists
     list1.insert(1);
     list1.insert(3);
     list1.insert(5);
@@ -92,10 +91,8 @@ int main() {
     cout << "List 2: ";
     list2.display();
 
-    // Merge the two sorted lists
     Node* mergedHead = mergeLinkedList(list1.head, list2.head);
 
-    // Display the merged sorted list
     cout << "Merged List: ";
     Node* temp = mergedHead;
     while (temp) {
