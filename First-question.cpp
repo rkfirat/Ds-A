@@ -2,6 +2,97 @@
 
 using namespace std;
 
+<<<<<<< HEAD
+class Node {
+    int data;
+    Node* next;
+
+    Node (int value) : data(value), next(NULL) {}
+};
+
+class LinkedList {
+    private:
+        Node* head;
+    public:
+        void add(int value)
+        {
+            Node* newNode = new Node(value);
+            if (!head)
+            {
+                head = newNode;
+            } else {
+                Node *temp = head;
+                while (temp->next)
+                    temp = temp->next;
+                temp->next = newNode;
+            }
+        }
+        void display()
+        {
+            Node *temp = head;
+            while (temp)
+            {
+                cout << temp->data << " ";
+                temp = temp->next;
+            }
+            cout << endl;
+        }
+
+        bool ExchangeNode(int i, int j)
+        {
+            if (i == j) return true;
+
+            Node *nodeI = NULL;
+            Node *nodeJ = NULL;
+
+            int index = 0;
+            Node *temp = head;
+            while (temp)
+            {
+                if (index == i) nodeI = temp;
+                if (index == j) nodeJ = temp;
+                temp = temp->next;
+                index++;
+            }
+
+            if (!nodeI || !nodeJ)
+                return false;
+
+            int tempo = nodeI->data;
+            nodeI->data = nodeJ->data;
+            nodeJ->data = tempo;
+            return true;
+        }
+};
+
+int main() {
+    LinkedList list;
+
+    // Listeye bazı elemanlar ekleyelim
+    list.add(10);
+    list.add(20);
+    list.add(30);
+    list.add(40);
+
+    cout << "Orijinal liste: ";
+    list.display();
+
+    // Düğüm değişimi
+    if (list.ExchangeNode(1, 3)) {
+        cout << "1 ve 3 indekslerindeki düğümler değiştirildi: ";
+        list.display();
+    } else {
+        cout << "Geçersiz indisler nedeniyle değişim yapılamadı." << endl;
+    }
+
+    // Geçersiz indislerle test
+    if (!list.ExchangeNode(1, 10)) {
+        cout << "Geçersiz indisler nedeniyle değişim yapılamadı." << endl;
+    }
+
+    return 0;
+}
+=======
 class Node {
     public:
     int data;
@@ -93,3 +184,4 @@ int main() {
 
     return 0;
 }
+>>>>>>> 4aaf2aff0de50d23960c9bb98845fccc694470d6
